@@ -1,0 +1,16 @@
+{
+  "name": "pruebawhats",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "yarn run chimp"
+  },
+  "description": "pruebaWhats",
+  "main": "index.js",
+  "author": "Santiago Bonilla",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chimp": "^0.51.1"
+  }
+}
