@@ -34,7 +34,7 @@ class Board extends Page {
     numberOfCookies(number) {
         if (number === 'two'){
             return 2;
-        }else if(number === 'tree'){
+        }else if(number === 'three'){
             return 3;
         }else if(number === 'four'){
             return 4;
