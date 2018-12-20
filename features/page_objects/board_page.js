@@ -13,6 +13,18 @@ class Board extends Page {
         return ('//*[@id="msg_input"]/div[1]');
     }
 
+    get myCoinsMessage() {
+        return ('//*[@id="messages_container"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div/div[9]/div/div[2]/span');
+    }
+
+    get leaderBoardMessage() {
+        return ('//*[@id="messages_container"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div/div[10]/div/div[2]/span');
+    }
+
+    get cookieSent() {
+        return ('//*[@id="messages_container"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div/div[9]/div/div[2]/span');
+    }
+
     jumpTo() {
         browser.element(`${this.jumpBtn}`).click();
     }
@@ -55,6 +67,20 @@ class Board extends Page {
 
         return cookieMsg;
    }
+
+   messageValidation(command, message) {
+       if(command === 'my cookies'){
+            browser.waitForVisible(this.myCoinsMessage);
+            this.assert(browser.element(this.myCoinsMessage).getText().includes(message), true);
+       }else if(command === 'show leaderboard'){
+            browser.waitForVisible(this.leaderBoardMessage);
+            this.assert(browser.element(this.leaderBoardMessage).getText().includes(message),true);
+       }else if(command === 'RewardApp'){
+            browser.waitForVisible(this.cookieSent);
+            this.assert(browser.element(this.cookieSent).getText().includes(message), true);
+       }
+   }
 }
 
 export default new Board();
+
