@@ -1,10 +1,10 @@
 {
-  "name": "pruebawhats",
+  "name": "cookiestest",
   "version": "1.0.0",
   "scripts": {
     "test": "yarn run chimp"
   },
-  "description": "pruebaWhats",
+  "description": "CookiesTest",
   "main": "index.js",
   "author": "Santiago Bonilla",
   "license": "MIT",
