@@ -6,6 +6,11 @@ export class Page{
     open(path){
         browser.url(this.url+path);
     }
+
+    close(){
+        browser.reload();
+    }
+
     maximize() {
         let windowHandle = browser.windowHandle();
         browser.windowHandleMaximize([windowHandle]);

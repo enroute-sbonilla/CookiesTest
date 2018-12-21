@@ -28,4 +28,8 @@ module.exports =  function() {
         SlackPage.setDomain(domain);    
         SlackPage.submitDomain();
       });
+
+    this.Then(/^I log out$/, function() {
+        SlackPage.close();
+      });
 }

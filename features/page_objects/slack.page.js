@@ -24,6 +24,10 @@ class SlackPage extends Page {
         if(maximized) super.maximize();
     }
 
+    close() {
+        super.close();
+    }
+
     click(elem){
         super.click(elem);
     }
