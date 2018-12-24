@@ -17,8 +17,8 @@ module.exports =  function() {
         Board.lookFor(channel);
         Board.messageValidation(channel, message)
       });
-      
-    this.Then(/I send "([^"]*)" (one|two|three|four|five) (cookie|cookies)$/, function(tagg1, number, icon) {
+
+    this.Then(/I send "([^"]*)" (one|two|three|four|five|six) (cookie|cookies)$/, function(tagg1, number, icon) {
           let num = Board.numberOfCookies(number);
           let message = '';
         
