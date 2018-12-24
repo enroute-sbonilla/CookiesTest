@@ -21,7 +21,12 @@ module.exports =  function() {
     this.Then(/I send "([^"]*)" (one|two|three|four|five|six) (cookie|cookies)$/, function(tagg1, number, icon) {
           let num = Board.numberOfCookies(number);
           let message = '';
-        
+          let argum = tagg1.split(' and ')
+          let userTag = ''
+          argum.forEach(function(element) {
+            userTag = userTag.concat(`@${element} `)
+          });
+
           switch (num) {
             case -1:
               message = ("Error, you can not send more than 5 tokens");
@@ -30,7 +35,7 @@ module.exports =  function() {
               message = ("Error, you must specify a valid number of tokens");
               break;
             default:
-              message = `@${tagg1} ${Board.getCookieMsg(num)}`;
+              message = `${userTag} ${Board.getCookieMsg(num)}`;
           }
       
           Board.setMessage(message);
