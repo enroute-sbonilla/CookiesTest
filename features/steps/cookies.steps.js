@@ -18,25 +18,10 @@ module.exports =  function() {
         Board.messageValidation(channel, message)
       });
       
-    this.Then(/I send "([^"]*)"(?: and "([^"]*)")?(?: and "([^"]*)")?(?: and "([^"]*)")?(?: and "([^"]*)")?(?: and "([^"]*)")? (one|two|tree|four|five) (cookie|cookies)$/, function(tagg1, tagg2, tagg3, tagg4, tagg5, number, icon) {
+    this.Then(/I send "([^"]*)" (one|two|tree|four|five) (cookie|cookies)$/, function(tagg1, number, icon) {
           let num = Board.numberOfCookies(number);
-          let users = '';
           let message = '';
-          if (tagg2 === 'x2' || tagg2 === '2') {
-            users = `@${tagg1}`;
-            console.log(`You can not multply tokens, you just sent ${num} cookies`)
-          } else if ( tagg2 != '' && tagg2 != 'x2' && tagg2 != '2'){
-            users = `@${tagg1} @${tagg2}`;
-          }else if (tagg3 != '') {
-            users = `@${tagg1} @${tagg2} @${tagg3}`;
-           }else if (tagg4 != '') {
-            users = `@${tagg1} @${tagg2} @${tagg3} @${tagg4}`;
-          } else if (tagg5 != '') {
-            users = `@${tagg1} @${tagg2} @${tagg3} @${tagg4} @${tagg5}`;
-          } else {
-            users = `@${tagg1}`;
-          }
-
+        
           switch (num) {
             case -1:
               message = ("Error, you can not send more than 5 tokens");
@@ -45,7 +30,7 @@ module.exports =  function() {
               message = ("Error, you must specify a valid number of tokens");
               break;
             default:
-              message = `${users} ${Board.getCookieMsg(num)}`;
+              message = `@${tagg1} ${Board.getCookieMsg(num)}`;
           }
       
           Board.setMessage(message);
