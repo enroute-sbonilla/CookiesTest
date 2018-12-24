@@ -69,6 +69,8 @@ class Board extends Page {
             return 4;
         } else if (number === 'five') {
             return 5;
+        } else if (number === 'six') {
+            return 6;
         } else {
             return -1;
         }
