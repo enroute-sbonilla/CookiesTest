@@ -5,6 +5,10 @@ class Board extends Page {
         return ('//*[@id="col_channels_react_root"]/nav/div/div[1]/div/div[1]/div/div/div[1]/button');
     }
 
+    get pruebaSpan() {
+        return ('span.c-message__body');
+    }
+
     get findChannel() {
         return ('/html/body/ts-jumper/ts-jumper-container/input');
     }

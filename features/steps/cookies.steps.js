@@ -21,10 +21,14 @@ module.exports =  function() {
     this.Then(/I send "([^"]*)" (one|two|three|four|five|six) (cookie|cookies)$/, function(tagg1, number, icon) {
           let num = Board.numberOfCookies(number);
           let message = '';
-          let argum = tagg1.split(' and ')
+          let argum = tagg1.split(' ')
           let userTag = ''
           argum.forEach(function(element) {
-            userTag = userTag.concat(`@${element} `)
+            if(element.length > 3 ){
+              userTag = userTag.concat(`@${element} `);
+            } else {
+              userTag = userTag.concat(`${element} `);
+            }     
           });
 
           switch (num) {
