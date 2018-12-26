@@ -8,7 +8,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel
         And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
         And I access to the "reward_test" channel
-        Then I send "c-fmichel and enroute-crecio" one cookie
+        Then I send "c-fmichel enroute-crecio" one cookie
         And I access to the "RewardApp" channel and the message "You sent a total of 2" should be displayed
         And I log out
 
@@ -19,7 +19,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel
         And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
         And I access to the "reward_test" channel
-        Then I send "c-fmichel and enroute-crecio and akolodny" one cookies
+        Then I send "c-fmichel enroute-crecio akolodny" one cookies
         And I access to the "RewardApp" channel and the message "You sent a total of 3" should be displayed
         And I log out
 
@@ -30,7 +30,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel
         And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
         And I access to the "reward_test" channel
-        Then I send "c-fmichel and enroute-crecio and akolodny and atoppa" one cookies
+        Then I send "c-fmichel enroute-crecio akolodny atoppa" one cookies
         And I access to the "RewardApp" channel and the message "You sent a total of 4" should be displayed
         And I log out
 
@@ -41,7 +41,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel
         And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
         And I access to the "reward_test" channel
-        Then I send "c-fmichel and enroute-crecio and akolodny and atoppa and msalvia" one cookies
+        Then I send "c-fmichel enroute-crecio akolodny atoppa msalvia" one cookies
         And I access to the "RewardApp" channel and the message "You sent a total of 5" should be displayed
         And I log out
  
@@ -52,7 +52,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel
         And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
         And I access to the "reward_test" channel
-        Then I send "c-fmichel and enroute-crecio" two cookies
+        Then I send "c-fmichel enroute-crecio" two cookies
         And I access to the "RewardApp" channel and the message "You sent a total of 4" should be displayed
         And I log out
     
