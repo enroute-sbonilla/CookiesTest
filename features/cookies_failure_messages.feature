@@ -93,7 +93,7 @@ Feature: A user should not be able to send cookies this way
       And I log out
 
   @manual
-  Scenario: A user should not be able to send tokens to himself
+  Scenario: A user should not be able to send tokens in channels that not include the reward
     Given a client is in Slack sign in page
     And I type "jwplayer" to access
     When I log in with account

@@ -1,7 +1,7 @@
 
 Feature: User should be able to send cookies to multiple coworkers in the app
 
-    Scenario: A user should be able to send cookies to different coworkers
+    Scenario: A user should be able to send 2 cookies to different coworkers
       Given a client is in Slack sign in page
         And I type "jwplayer" to access 
         When I log in with account
@@ -12,7 +12,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel and the message "You sent a total of 2" should be displayed
         And I log out
 
-    Scenario: A user should be able to send cookies to different coworkers
+    Scenario: A user should be able to send 3 cookies to different coworkers
       Given a client is in Slack sign in page
         And I type "jwplayer" to access 
         When I log in with account
@@ -23,7 +23,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel and the message "You sent a total of 3" should be displayed
         And I log out
 
-    Scenario: A user should be able to send cookies to different coworkers
+    Scenario: A user should be able to send 4 cookies to different coworkers
       Given a client is in Slack sign in page
         And I type "jwplayer" to access 
         When I log in with account
@@ -34,7 +34,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel and the message "You sent a total of 4" should be displayed
         And I log out
 
-    Scenario: A user should be able to send cookies to different coworkers
+    Scenario: A user should be able to send 5 cookies to different coworkers
       Given a client is in Slack sign in page
         And I type "jwplayer" to access 
         When I log in with account
@@ -45,7 +45,7 @@ Feature: User should be able to send cookies to multiple coworkers in the app
         And I access to the "RewardApp" channel and the message "You sent a total of 5" should be displayed
         And I log out
  
-    Scenario: A user should be able to send cookies to different coworkers
+    Scenario: A user should be able to send 4 cookies to two different coworkers 
       Given a client is in Slack sign in page
         And I type "jwplayer" to access 
         When I log in with account
