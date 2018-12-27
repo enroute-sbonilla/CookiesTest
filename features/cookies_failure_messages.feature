@@ -31,7 +31,7 @@ Feature: A user should not be able to send cookies this way
     And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
     And I access to the "reward_test" channel
     Then I send "here" one cookie
-    And I access to the "RewardApp" channel and the message "Very funny, but you can't send tacos to yourself." should be displayed
+    And I access to the "RewardApp" channel and the message "Very funny, but you can't send cookies using that tag." should be displayed
     And I log out
 
   @WIP @manual
@@ -43,7 +43,7 @@ Feature: A user should not be able to send cookies this way
     And I type the command "reset daily cookies" and the message "The cookies has been reset." should be displayed
     And I access to the "reward_test" channel
     Then I send "channel" one cookie
-    And I access to the "RewardApp" channel and the message "Very funny, but you can't send tacos to yourself." should be displayed
+    And I access to the "RewardApp" channel and the message "Very funny, but you can't send cookies using that tag." should be displayed
     And I log out
 
   @WIP @manual
