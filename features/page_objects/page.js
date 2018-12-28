@@ -1,13 +1,18 @@
 export class Page{
     constructor() {
         this.url = 'https://slack.com/signin';
+        this.reUrl = 'https://jwplayer-rewards.herokuapp.com/leaderboard/'
     }
 
-    open(path){
+    open(path) {
         browser.url(this.url+path);
     }
 
-    close(){
+    openRewd(path) {
+        browser.url(this.reUrl+path)
+    }
+
+    close() {
         browser.reload();
     }
 
